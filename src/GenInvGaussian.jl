@@ -93,7 +93,7 @@ function rand(d::GeneralizedInverseGaussian)
 
     xm = b / ( r - p) / 2
 
-    acceptrate(x::Real) = (x./xm)^(p - r) * exp(-b/2*(1./x - 1./xm))
+    acceptrate(x::Real) = (x./xm)^(p - r) * exp(-b/2*(1. /x - 1. /xm))
 
     while true
         sproposal = rand(dproposal)
