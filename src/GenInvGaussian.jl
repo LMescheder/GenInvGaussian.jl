@@ -8,7 +8,7 @@ using Distributions
 import Distributions: mean, var, mode, mgf, cf, rand, params, minimum, maximum
 # import Distributions: @check_args, @distr_support
 
-immutable GeneralizedInverseGaussian <: ContinuousUnivariateDistribution
+struct GeneralizedInverseGaussian <: ContinuousUnivariateDistribution
     p::Float64
     a::Float64
     b::Float64
