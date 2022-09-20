@@ -5,6 +5,7 @@ export GeneralizedInverseGaussian
 import Base.mean
 import Base.rand
 using Distributions
+using SpecialFunctions
 import Distributions: mean, var, mode, mgf, cf, rand, params, minimum, maximum
 # import Distributions: @check_args, @distr_support
 
