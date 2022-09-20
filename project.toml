@@ -1,0 +1,4 @@
+name = "GenInvGaussian"
+uuid = "347554f4-5be8-4190-ad75-89be9a4fcb58"
+authors = ["LMescheder"]
+version = "0.0.0"
