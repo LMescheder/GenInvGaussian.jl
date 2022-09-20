@@ -2,3 +2,6 @@ name = "GenInvGaussian"
 uuid = "347554f4-5be8-4190-ad75-89be9a4fcb58"
 authors = ["LMescheder"]
 version = "0.0.0"
+
+[deps]
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
