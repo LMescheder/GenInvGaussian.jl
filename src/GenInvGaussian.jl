@@ -5,10 +5,11 @@ export GeneralizedInverseGaussian
 import Base.mean
 import Base.rand
 using Distributions
+using SpecialFunctions
 import Distributions: mean, var, mode, mgf, cf, rand, params, minimum, maximum
 # import Distributions: @check_args, @distr_support
 
-immutable GeneralizedInverseGaussian <: ContinuousUnivariateDistribution
+struct GeneralizedInverseGaussian <: ContinuousUnivariateDistribution
     p::Float64
     a::Float64
     b::Float64
@@ -93,7 +94,7 @@ function rand(d::GeneralizedInverseGaussian)
 
     xm = b / ( r - p) / 2
 
-    acceptrate(x::Real) = (x./xm)^(p - r) * exp(-b/2*(1./x - 1./xm))
+    acceptrate(x::Real) = (x./xm)^(p - r) * exp(-b/2*(1. /x - 1. /xm))
 
     while true
         sproposal = rand(dproposal)
